@@ -1,0 +1,381 @@
+/* ================================
+   COLOR PALETTE VARIABLES
+   Only these 6 base colors used
+   ================================ */
+:root {
+  --c1: #eceff1;
+  --c2: #cfd8dc;
+  --c3: #90a4ae;
+  --c4: #546e7a;
+  --c5: #37474f;
+  --c6: #263238;
+}
+
+/* Light & Dark theme tokens from palette */
+:root[data-theme="light"] {
+  --bg: var(--c1);
+  --card-bg: var(--c2);
+  --card-bg-soft: var(--c1);
+  --text-main: var(--c6);
+  --text-muted: var(--c3);
+  --border-color: var(--c2);
+  --btn-primary-bg: var(--c5);
+  --btn-secondary-bg: var(--c4);
+  --btn-accent-bg: var(--c3);
+  --btn-text: var(--c1);
+}
+
+:root[data-theme="dark"] {
+  --bg: var(--c6);
+  --card-bg: var(--c5);
+  --card-bg-soft: var(--c4);
+  --text-main: var(--c1);
+  --text-muted: var(--c3);
+  --border-color: var(--c4);
+  --btn-primary-bg: var(--c2);
+  --btn-secondary-bg: var(--c3);
+  --btn-accent-bg: var(--c4);
+  --btn-text: var(--c6);
+}
+
+/* ================================
+   GLOBAL RESET
+   ================================ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  background: var(--bg);
+  transition: background 0.3s ease;
+}
+
+/* ================================
+   PAGE WRAPPER
+   ================================ */
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+}
+
+/* Theme toggle button (top-right) */
+.theme-toggle {
+  position: absolute;
+  top: 18px;
+  right: 22px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: var(--card-bg-soft);
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+/* ================================
+   HOME LAYOUT
+   ================================ */
+.home-wrapper {
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.app-subtitle {
+  font-size: 15px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* ================================
+   CLOCK LAYOUT & CARDS
+   ================================ */
+.clock-layout {
+  width: 100%;
+  max-width: 540px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Generic card */
+.card {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 16px 18px;
+  border: 1px solid var(--border-color);
+}
+
+/* Day/date card */
+.day-card {
+  position: relative;
+}
+
+.day-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.day-text {
+  font-size: 16px;
+  color: var(--text-muted);
+}
+
+.date-text {
+  font-size: 18px;
+  color: var(--text-main);
+  margin-top: 4px;
+}
+
+/* Calendar toggle icon button */
+.calendar-toggle {
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  padding: 4px 8px;
+  background: var(--card-bg-soft);
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Calendar popup */
+.calendar-popup {
+  margin-top: 12px;
+  background: var(--card-bg-soft);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 10px;
+}
+
+.calendar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.calendar-title {
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+/* header right: Today + next */
+.calendar-header-right {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.calendar-nav {
+  border: none;
+  background: transparent;
+  color: var(--text-main);
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Today button */
+.calendar-today-btn {
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  padding: 2px 8px;
+  font-size: 11px;
+  background: var(--card-bg);
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+/* Calendar grid */
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 4px;
+}
+
+.calendar-cell {
+  height: 24px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-main);
+}
+
+.calendar-head {
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.calendar-today {
+  border-radius: 999px;
+  background: var(--c4);
+  color: var(--c1);
+}
+
+/* Time cards (12h / 24h) */
+.time-card {
+  background: var(--card-bg-soft);
+}
+
+.card-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.time-display {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.ampm-label {
+  font-size: 14px;
+  margin-left: 4px;
+  color: var(--text-muted);
+}
+
+/* ================================
+   PRIMARY LINK BUTTON (home & back)
+   ================================ */
+.primary-link {
+  margin-top: 16px;
+  padding: 10px 24px;
+  border-radius: 999px;
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  text-align: center;
+}
+
+/* Stopwatch page back button uses same style */
+.back-btn {
+  align-self: center;
+}
+
+/* ================================
+   STOPWATCH PAGE
+   ================================ */
+.stopwatch-wrapper {
+  max-width: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.stopwatch-heading {
+  font-size: 16px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.stopwatch-card {
+  width: 100%;
+  background: var(--card-bg);
+  border-radius: 18px;
+  padding: 20px 18px;
+  border: 1px solid var(--border-color);
+}
+
+.stopwatch-title {
+  font-size: 18px;
+  color: var(--text-main);
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+/* Stopwatch inner layout */
+.stopwatch-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.stopwatch-time {
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Buttons row */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.btn {
+  min-width: 80px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* Button colors from palette tokens */
+.primary-btn {
+  background: var(--btn-primary-bg);
+  color: var(--btn-text);
+}
+
+.secondary-btn {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-text);
+}
+
+.accent-btn {
+  background: var(--btn-accent-bg);
+  color: var(--btn-text);
+}
+
+.stopwatch-note {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ================================
+   RESPONSIVE
+   ================================ */
+@media (max-width: 600px) {
+  .app-title {
+    font-size: 26px;
+  }
+
+  .time-display {
+    font-size: 22px;
+  }
+
+  .stopwatch-time {
+    font-size: 26px;
+  }
+}
