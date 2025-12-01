@@ -47,7 +47,8 @@ src/
 
 
 
-How to Run the Project
+# How to Run the Project
+
 1️⃣ Install the dependencies:
 npm install
 
@@ -57,9 +58,9 @@ npm run dev
 3️⃣ Open the project in your browser:
 http://localhost:5173/
 
-👥 Team Members
+# Team Members
 
-Team-Cygnus (T-5)
+## Team-Cygnus (T-5)
 
 1.Samia Kamal Porosh
 
