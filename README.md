@@ -46,11 +46,6 @@ src/
 ├── DigitalClock.jsx
 └── Stopwatch.jsx
 
-yaml
-Copy code
-
----
-
 # ▶️ How to Run the Project
 
 ### 1. Install dependencies:
