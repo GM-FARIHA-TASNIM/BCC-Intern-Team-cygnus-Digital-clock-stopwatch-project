@@ -1,16 +1,81 @@
-# React + Vite
+# Time Keeper – Digital Clock & Stopwatch  
+**Team-Cygnus (T-5)**  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React-based project built as part of the **Frontend Development Team Project**.  
+It includes a beautifully designed digital clock and stopwatch system — all styled using only the given 6-color palette.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# 📌 Features
 
-## React Compiler
+## 🕒 Digital Clock Page
+- Shows **Day & Date** inside a clean card
+- Built-in **calendar popup** for browsing months
+- **12-hour clock** (AM/PM)
+- **24-hour clock**
+- Fully centered, neat card layout
+- **Light/Dark Mode toggle**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## ⏱ Stopwatch Page
+- **Start / Stop / Reset** controls
+- Stopwatch displayed in the center
+- Motivational line at the top  
+- Small inspirational note at the bottom
+- **“Back to Clock”** button styled the same as “Go to Stopwatch”
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+# 📁 Project File Structure
+
+src/
+│
+├── main.jsx
+├── App.jsx
+├── App.css
+│
+├── context/
+│ └── ThemeContext.jsx
+│
+├── pages/
+│ ├── Home.jsx
+│ └── StopwatchPage.jsx
+│
+└── components/
+├── DigitalClock.jsx
+└── Stopwatch.jsx
+
+yaml
+Copy code
+
+---
+
+# ▶️ How to Run the Project
+
+### 1. Install dependencies:
+```bash
+npm install
+2. Start the development server:
+bash
+Copy code
+npm run dev
+3. Open the local development link (usually):
+arduino
+Copy code
+http://localhost:5173
+
+👥 Team Members
+Team-Cygnus (T-5)
+
+1.Samia Kamal Porosh
+
+2.Fariha Tasnim
+
+3.Moniya Fateha
+
+4.Samiha Sayeeda Nidhi
+
+5.Israt Jahan Trishma
+
+6.Mahira Tahsina Sneha
