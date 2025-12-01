@@ -25,7 +25,7 @@ It includes a fully designed digital clock and stopwatch system — all styled u
 
 ---
 
-# 📁 Project File Structure
+## 📁 Project Structure
 
 ```text
 src/
@@ -46,22 +46,20 @@ src/
     └── Stopwatch.jsx
 
 
-#  How to Run the Project
 
-### 1. Install dependencies:
-```bash
+How to Run the Project
+1️⃣ Install the dependencies:
 npm install
-2. Start the development server:
-bash
-Copy code
-npm run dev
-3. Open the local development link (usually):
-arduino
-Copy code
-http://localhost:5173
 
-# Team Members
-## Team-Cygnus (T-5)
+2️⃣ Start the development server:
+npm run dev
+
+3️⃣ Open the project in your browser:
+http://localhost:5173/
+
+👥 Team Members
+
+Team-Cygnus (T-5)
 
 1.Samia Kamal Porosh
 
