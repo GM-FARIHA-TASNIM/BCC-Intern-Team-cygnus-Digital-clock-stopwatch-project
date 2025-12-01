@@ -26,8 +26,7 @@ It includes a fully designed digital clock and stopwatch system — all styled u
 ---
 
 ## 📁 Project Structure
-
-```text
+```
 src/
 │
 ├── main.jsx
@@ -44,32 +43,35 @@ src/
 └── components/
     ├── DigitalClock.jsx
     └── Stopwatch.jsx
+```
 
+---
 
+## ▶️ How to Run the Project
 
-# How to Run the Project
-
-1️⃣ Install the dependencies:
+### 1️⃣ Install dependencies:
+```bash
 npm install
+```
 
-2️⃣ Start the development server:
+### 2️⃣ Start development server:
+```bash
 npm run dev
+```
 
-3️⃣ Open the project in your browser:
+### 3️⃣ Open in browser:
+```
 http://localhost:5173/
+```
 
-# Team Members
+---
 
-## Team-Cygnus (T-5)
+## 👥 Team Members  
+**Team-Cygnus (T-5)**
 
-1.Samia Kamal Porosh
-
-2.Fariha Tasnim
-
-3.Moniya Fateha
-
-4.Samiha Sayeeda Nidhi
-
-5.Israt Jahan Trishma
-
-6.Mahira Tahsina Sneha
+1. **Samia Kamal Porosh**  
+2. **Fariha Tasnim**  
+3. **Moniya Fateha**  
+4. **Samiha Sayeeda Nidhi**  
+5. **Israt Jahan Trishma**  
+6. **Mahira Tahsina Sneha**
